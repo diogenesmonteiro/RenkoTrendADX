@@ -67,18 +67,18 @@ namespace NinjaTrader.NinjaScript.Strategies
 			}
 			else if (State == State.DataLoaded)
 			{				
-				Stochastics1		= Stochastics(Close, Convert.ToInt32(StochD), Convert.ToInt32(StochK), Convert.ToInt32(StochS));
-				Stochastics2		= Stochastics(Close, 7, 14, 3);
+				Stochastics1			= Stochastics(Close, Convert.ToInt32(StochD), Convert.ToInt32(StochK), Convert.ToInt32(StochS));
+				Stochastics2			= Stochastics(Close, 7, 14, 3);
 				EMA1				= EMA(Close, 5);
 				EMA2				= EMA(Close, Convert.ToInt32(MAPeriod));
 				ADX1				= ADX(Close, 14);
-				Stochastics1.Plots[0].Brush = Brushes.DodgerBlue;
-				Stochastics1.Plots[1].Brush = Brushes.Goldenrod;
-				Stochastics2.Plots[0].Brush = Brushes.DodgerBlue;
-				Stochastics2.Plots[1].Brush = Brushes.Goldenrod;
-				EMA1.Plots[0].Brush = Brushes.Goldenrod;
-				EMA2.Plots[0].Brush = Brushes.Goldenrod;
-				ADX1.Plots[0].Brush = Brushes.DarkCyan;
+				Stochastics1.Plots[0].Brush 	= Brushes.DodgerBlue;
+				Stochastics1.Plots[1].Brush 	= Brushes.Goldenrod;
+				Stochastics2.Plots[0].Brush 	= Brushes.DodgerBlue;
+				Stochastics2.Plots[1].Brush 	= Brushes.Goldenrod;
+				EMA1.Plots[0].Brush 		= Brushes.Goldenrod;
+				EMA2.Plots[0].Brush 		= Brushes.Goldenrod;
+				ADX1.Plots[0].Brush 		= Brushes.DarkCyan;
 				AddChartIndicator(Stochastics1);
 				AddChartIndicator(Stochastics2);
 				AddChartIndicator(EMA1);
