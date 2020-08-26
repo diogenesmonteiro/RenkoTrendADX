@@ -24,7 +24,7 @@ using NinjaTrader.NinjaScript.DrawingTools;
 
 namespace NinjaTrader.NinjaScript.Strategies
 {
-	public class RenkoTest2TrendADXTimeCode : Strategy
+	public class RenkoTrendADX : Strategy
 	{
 		private Stochastics Stochastics1;
 		private Stochastics Stochastics2;
@@ -36,31 +36,31 @@ namespace NinjaTrader.NinjaScript.Strategies
 		{
 			if (State == State.SetDefaults)
 			{
-				Description									= @"Enter the description for your new custom Strategy here.";
-				Name										= "RenkoTest2TrendADXTimeCode";
-				Calculate									= Calculate.OnBarClose;
-				EntriesPerDirection							= 1;
-				EntryHandling								= EntryHandling.AllEntries;
-				IsExitOnSessionCloseStrategy				= true;
-				ExitOnSessionCloseSeconds					= 30;
-				IsFillLimitOnTouch							= false;
-				MaximumBarsLookBack							= MaximumBarsLookBack.TwoHundredFiftySix;
-				OrderFillResolution							= OrderFillResolution.Standard;
-				Slippage									= 0;
-				StartBehavior								= StartBehavior.WaitUntilFlat;
-				TimeInForce									= TimeInForce.Gtc;
-				TraceOrders									= false;
-				RealtimeErrorHandling						= RealtimeErrorHandling.StopCancelClose;
-				StopTargetHandling							= StopTargetHandling.PerEntryExecution;
-				BarsRequiredToTrade							= 20;
+				Description					= @"Enter the description for your new custom Strategy here.";
+				Name						= "RenkoTest2TrendADXTimeCode";
+				Calculate					= Calculate.OnBarClose;
+				EntriesPerDirection				= 1;
+				EntryHandling					= EntryHandling.AllEntries;
+				IsExitOnSessionCloseStrategy			= true;
+				ExitOnSessionCloseSeconds			= 30;
+				IsFillLimitOnTouch				= false;
+				MaximumBarsLookBack				= MaximumBarsLookBack.TwoHundredFiftySix;
+				OrderFillResolution				= OrderFillResolution.Standard;
+				Slippage					= 0;
+				StartBehavior					= StartBehavior.WaitUntilFlat;
+				TimeInForce					= TimeInForce.Gtc;
+				TraceOrders					= false;
+				RealtimeErrorHandling				= RealtimeErrorHandling.StopCancelClose;
+				StopTargetHandling				= StopTargetHandling.PerEntryExecution;
+				BarsRequiredToTrade				= 20;
 				// Disable this property for performance gains in Strategy Analyzer optimizations
 				IsInstantiatedOnEachOptimizationIteration	= true;
-				StopLoss				= 8;
-				TakeProfit				= 4;
-				MAPeriod				= 200;
-				StochD					= 7;
-				StochK					= 14;
-				StochS					= 3;
+				StopLoss					= 8;
+				TakeProfit					= 4;
+				MAPeriod					= 200;
+				StochD						= 7;
+				StochK						= 14;
+				StochS						= 3;
 			}
 			else if (State == State.Configure)
 			{
